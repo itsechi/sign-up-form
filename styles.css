@@ -37,6 +37,7 @@ body:before {
   position: relative;
   z-index: 1;
   box-shadow: 0px 0px 20px 5px var(--dark-transparent);
+  margin: 20px;
 }
 
 
@@ -195,4 +196,66 @@ h4 {
 h4 a {
   text-decoration: none;
   color: #004054;
+}
+
+
+/* media queries */
+@media (max-width: 1200px) {
+  .logo-container h1 {
+    font-size: 2rem;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .logo-container {
+    padding: 15px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .logo-container h1 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .container {
+    flex-direction: column;
+    width: 600px;
+  }
+
+  .image-container {
+    height: 20vh;
+  }
+
+  .logo-container {
+    top: 50%;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .logo-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .info-container {
+    padding: 1rem 0rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 500px;
+  }
 }
