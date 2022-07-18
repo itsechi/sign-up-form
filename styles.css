@@ -4,56 +4,195 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  --dark-color: #0A1829;
+  --dark-transparent: #0a18298a;
+  --lime: #D4C540;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   width: 100%;
   height: 100vh;
-  background-color: #0c2e1d;
-}
-.container {
+  background-color: var(--dark-color);
   display: flex;
-  gap: 50px;
-  height: 100%;
-  filter: none;
-  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
-
-.container:before {
+body:before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url('https://images.pexels.com/photos/3233142/pexels-photo-3233142.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url('https://images.pexels.com/photos/2932758/pexels-photo-2932758.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover no-repeat;
   filter: blur(50px);
   width: 100%;
   height: 100%;
   z-index: -1;
 }
 
-
-.image-container {
-  background-image: url('https://images.pexels.com/photos/3233142/pexels-photo-3233142.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 50px;
-  width: 100%;
+.container {
+  display: flex;
+  width: 1200px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 0px 20px 5px var(--dark-transparent);
 }
 
-.logo {
-  width: 150px;
-  height: 150px;
+
+/* left */
+.image-container {
+  background: url('https://images.pexels.com/photos/2932758/pexels-photo-2932758.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover no-repeat;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .logo-container {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  justify-content: center;
+  background-color: var(--dark-transparent);
+  padding: 20px;
   margin: 0 auto;
+  width: 100%;
+  position: absolute;
+  top: 15%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.logo-container h1 {
+  font-size: 2.2rem;
+  color: #fff;
+  font-weight: 300;
+  margin-left: 1rem;
+}
+
+.image-container p {
+  color: rgba(255, 255, 255, 0.795);
+  margin: 0.2rem 0.5rem;
+}
+
+p a {
+  text-decoration: none;
+  color: white;
+}
+
+
+/* right */
+.info-container {
+  background-color: #fff;
+  padding: 5rem 0;
+  width: 100%;
+}
+
+.info-container h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.info-container span {
+  font-style: italic;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.form-wrap {
+  background-color: #e9d4d386;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.19);
+  padding: 0 1rem;
+  padding-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+h2 {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.form-row {
+  display: flex;
+  width: 100%;
+}
+
+.input-wrap {
+  margin: 1rem 3rem 0.5rem 0;
+  width: 100%;
+}
+
+label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.input-wrap input {
+  height: 2.1rem;
+  width: 13rem;
+  padding: 0.4rem 0.3rem;
+  margin-top: 0.2rem;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.input-wrap input:valid {
+  border: 2px solid var(--lime);
+}
+
+small {
+  opacity: 0;
+}
+
+.error {
+  outline: 2px solid red;
+}
+
+.error-message {
+  opacity: 1;
+  color: red;
+}
+
+.btn {
+  margin: 1.5rem 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: var(--lime);
+  color: var(--dark-color);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: inherit;
+  cursor: pointer;
+  width: 15rem;
+}
+
+.btn:hover {
+  background-color: #af9f0f;
+}
+
+h4 {
+  padding: 0 1rem;
+}
+
+h4 a {
+  text-decoration: none;
+  color: #004054;
 }

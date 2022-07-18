@@ -12,49 +12,67 @@
 <body>
   <div class="container">
     <div class="image-container">
-      <div class="logo-container"> <img src="./img/odin-lined.png" class="logo">
+      <div class="logo-container">
+        <img src="./img/odin-lined.png" class="logo">
+        <h1>sign-up form</h1>
       </div>
+      <p>Photo by <a href="ttps://www.pexels.com/photo/aerial-photography-of-village-near-body-of-water-2932758/">Jeswin  Thomash</a></p>
     </div>
+    
     <div class="info-container">
-      <h1>This is not a real online service! You know you need something like this in your life to help you realize your
-        deepest dreams. Sign up now to get started.</h1>
-      <h1>You know you want to.</h1>
+      <h1>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <span>now</span> to get started.</h1>
+      <h1>You <span>know</span> you want to.</h1>
+
       <div class="form-container">
-        <div class="form-wrap">
-          <h2>Let's do this!</h2>
-          <form action="#">
-            <div class="input-wrap">
-              <label for="first-name">First name</label>
-              <input type="text" id="first-name" required>
+        <form action="#">
+          <div class="form-wrap">
+            <h2>Let's do this!</h2>
+
+            <div class="form-row">
+              <div class="input-wrap">
+                <label for="first-name"><i class="uil uil-user"></i> First name</label>
+                <input type="text" id="first-name" required>
+              </div>
+              <div class="input-wrap">
+                <label for="last-name"><i class="uil uil-user"></i> Last name</label>
+                <input type="text" id="last-name" required>
+              </div>
             </div>
-            <div class="input-wrap">
-              <label for="last-name">Last name</label>
-              <input type="text" id="last-name" required>
+
+            <div class="form-row">
+              <div class="input-wrap">
+                <label for="email"><i class="uil uil-envelope"></i> Email</label>
+                <input type="email" id="email" required>
+              </div>
+              <div class="input-wrap">
+                <label for="number"><i class="uil uil-phone"></i> Phone number</label>
+                <input type="text" id="number" minlength="9" pattern="^\+?[1-9][0-9]{7,14}$"
+                  title="International phone number format without delimiters and with an optional plus sign" required>
+              </div>
             </div>
-            <div class="input-wrap">
-              <label for="email">Email</label>
-              <input type="email" id="email" required>
+
+            <div class="form-row">
+              <div class="input-wrap">
+                <label for="password"><i class="uil uil-lock"></i> Password</label>
+                <input type="password" id="password" minlength="7" required>
+                <small>Passwords do not match!</small>
+              </div>
+              <div class="input-wrap">
+                <label for="password-check"><i class="uil uil-lock"></i> Confirm password</label>
+                <input type="password" id="password-check" minlength="7" required>
+                <small>Passwords do not match!</small>
+              </div>
             </div>
-            <div class="input-wrap">
-              <label for="number">Phone number</label>
-              <input type="text" id="number" minlength="9" pattern="^\+?[1-9][0-9]{7,14}$"
-                title="International phone number format without delimiters and with an optional plus sign" required>
-            </div>
-            <div class="input-wrap">
-              <label for="password">Password</label>
-              <input type="password" id="password" required>
-            </div>
-            <div class="input-wrap">
-              <label for="password-check">Confirm password</label>
-              <input type="password" id="password-check" required>
-            </div>
-        </div>
-        <input type="submit" value="Create Account">
-        <h4>Already have an account? <a href="#">Log in</a></h4>
+
+          </div>
+          <input type="submit" value="Create Account" class="btn">
+          <h4>Already have an account? <a href="#">Log in</a></h4>
         </form>
       </div>
+
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>
