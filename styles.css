@@ -152,12 +152,12 @@ label {
   font-family: inherit;
 }
 
-.input-wrap input:valid {
-  border: 2px solid var(--lime);
-}
-
 small {
   opacity: 0;
+}
+
+.valid {
+  outline: 2px solid var(--lime);
 }
 
 .error {
@@ -191,11 +191,13 @@ small {
 
 h4 {
   padding: 0 1rem;
+  font-weight: 500;
 }
 
 h4 a {
   text-decoration: none;
   color: #004054;
+  font-weight: 600;
 }
 
 
