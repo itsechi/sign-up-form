@@ -231,15 +231,15 @@ h4 a {
 @media (max-width: 850px) {
   .container {
     flex-direction: column;
-    width: 600px;
+    width: 80vw;
   }
 
   .image-container {
-    height: 20vh;
+    flex: 0 0 200px;
   }
 
   .logo-container {
-    top: 50%;
+    top: 40%;
   }
 
   .logo {
@@ -259,5 +259,43 @@ h4 a {
 @media (max-width: 600px) {
   .container {
     width: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 90vw;
+    height: 95vh;
+  }
+
+  .image-container {
+    flex: 0 0 150px;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .form-row {
+    display: block;
+  }
+
+  .input-wrap {
+    margin: 1rem 1rem 0.5rem 0;
+    width: 100%;
+    height: 5rem;
+  }
+
+  .input-wrap input {
+    width: 80vw;
+  }
+
+  .btn {
+    margin: 1.5rem auto;
+  }
+
+  h4 {
+    text-align: center;
   }
 }
